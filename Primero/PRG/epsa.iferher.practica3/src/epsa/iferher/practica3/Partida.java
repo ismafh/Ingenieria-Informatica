@@ -18,7 +18,7 @@ public class Partida {
         this.jugador = jugador;
     }
 
-    public void añadirJugador(Jugador x){
+    public void anyadirJugador(Jugador x){
         boolean esta = false;
         for (int i=0; i<numerojugadores;i++){
             if (x.getID().equals(jugador[i].getID())){
@@ -29,10 +29,10 @@ public class Partida {
             jugador=Arrays.copyOf(jugador, numerojugadores+1);
             jugador[numerojugadores]=x;
             numerojugadores++;
-            System.out.println("Jugador añadido correctamente");
+            System.out.println("Jugador aï¿½adido correctamente");
         }
-        else if (!esta){System.out.println("Este jugador esta sancionado y por tanto no se le ha añaddido");}
-        else{System.out.println("Ese jugador ya está en la lista");}
+        else if (!esta){System.out.println("Este jugador esta sancionado y por tanto no se le ha aï¿½addido");}
+        else{System.out.println("Ese jugador ya estï¿½ en la lista");}
     }
 
     public Juego getJuego() {

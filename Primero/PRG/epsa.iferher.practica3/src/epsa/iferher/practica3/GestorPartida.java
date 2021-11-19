@@ -102,7 +102,7 @@ public class GestorPartida{
         Scanner tec = new Scanner(System.in);
         System.out.println("--------MENU PARTIDAS--------");
         System.out.println("1.Seleccionar juego");
-        System.out.println("2.Añadir jugador a juego");
+        System.out.println("2.Aï¿½adir jugador a juego");
         System.out.println("3.Listar datos de partida");
         System.out.println("4.Jugar");
         System.out.println("0.Volver al Menu Principal");
@@ -115,7 +115,7 @@ public class GestorPartida{
 
             case 1: Juego l = selecc(tec); if (l!=null){x.setJuego(l);}menupartidas(x);
             break;
-            case 2: System.out.println("Introduce el ID del usario a añadir");
+            case 2: System.out.println("Introduce el ID del usario a aï¿½adir");
             String ID=tec.nextLine();
             int i=0;
             boolean existe=false;
@@ -125,7 +125,7 @@ public class GestorPartida{
                 }
                 i++;
             }
-            if(existe){x.añadirJugador(listajugadores[i-1]);}
+            if(existe){x.anyadirJugador(listajugadores[i-1]);}
             else {System.out.println("Ese jugador no existe");}
             menupartidas(x);
             break;
@@ -242,7 +242,7 @@ public class GestorPartida{
             
             numjuegos++;
         }
-        else{System.out.println("Código inválido");}
+        else{System.out.println("Cï¿½digo invï¿½lido");}
     }
 
     public void listarjuegos(){
@@ -269,7 +269,7 @@ public class GestorPartida{
             System.out.println("Jugador sancionado correctamente");
         }
         else if (existe){
-            System.out.println("Este jugador ya está sancionado");
+            System.out.println("Este jugador ya estï¿½ sancionado");
         }
         else{System.out.println("No existe un jugador con esa ID");}
         
@@ -291,7 +291,7 @@ public class GestorPartida{
             System.out.println("Sancion quitada correctamente");
         }
         else if (existe){
-            System.out.println("Este jugador ya está sin sancionar");
+            System.out.println("Este jugador ya estï¿½ sin sancionar");
         }
         else{System.out.println("No existe un jugador con esa ID");}
         
@@ -311,7 +311,7 @@ public class GestorPartida{
     //Te devuelve null si el juego no existe, en caso contrario te devuelve el juego seleccionado
     public Juego selecc(Scanner tec){
         Juego juego = null;
-        if(Juego.getNumjuegosact()==0){System.out.println("No hay ningún juego activo");return juego;}
+        if(Juego.getNumjuegosact()==0){System.out.println("No hay ningï¿½n juego activo");return juego;}
         else{
             System.out.println("Introduce el codigo del juego que quieras seleccionar");
             int codigo=tec.nextInt();
@@ -327,7 +327,7 @@ public class GestorPartida{
                 
             }
             if (existe&&listaJuegos[i-1].getActivo()){juego = listaJuegos[i-1];return juego;}
-            else if (existe){System.out.println("Este juego no está activo");}
+            else if (existe){System.out.println("Este juego no estï¿½ activo");}
             else{System.out.println("Este juego no existe");}
             return juego;
         }
@@ -391,17 +391,17 @@ public class GestorPartida{
     }
     public void Jugar(Partida x){
         if (x.getJuego().getCodigo()==-1){System.out.println("no has elegido juego");menupartidas(x);}
-        else if (x.getNumerojugadores()>x.getJuego().getMaxjugadores()){System.out.println("Hay más jugadores que el máximo, vuelve al menu para reiniciar las opciones de partida");menupartidas(x);}
-        else if (x.getNumerojugadores()<x.getJuego().getMinjugadores()){System.out.println("Hay menos jugadores que el mínimo,!AÑADE MAS!");menupartidas(x);}
+        else if (x.getNumerojugadores()>x.getJuego().getMaxjugadores()){System.out.println("Hay mï¿½s jugadores que el mï¿½ximo, vuelve al menu para reiniciar las opciones de partida");menupartidas(x);}
+        else if (x.getNumerojugadores()<x.getJuego().getMinjugadores()){System.out.println("Hay menos jugadores que el mï¿½nimo,!Aï¿½ADE MAS!");menupartidas(x);}
         else {x.setIniciada(true);}
         System.out.println("Partida iniciada = "+x.isIniciada());
         Scanner tec = new Scanner(System.in);
-        System.out.println("Felicidades, estás jugando, cuando quieras parar de jugar escribe 0");
+        System.out.println("Felicidades, estï¿½s jugando, cuando quieras parar de jugar escribe 0");
         while(true){
         int m = tec.nextInt();
         tec.nextLine();
         if (m==0){System.exit(0);}
-        else{System.out.println("Ese número no es 0");}
+        else{System.out.println("Ese nï¿½mero no es 0");}
         }
     }   
 }
