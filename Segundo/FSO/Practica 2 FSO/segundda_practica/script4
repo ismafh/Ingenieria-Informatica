@@ -1,0 +1,14 @@
+#!/bin/bash
+file1=$1
+file2=$2
+if [ -z "$file1" ]; then
+  echo "Falta fichero"
+	exit 0
+fi
+
+if [ -z "$file2" ]; then
+  echo "Falta fichero"
+	exit 0
+fi
+
+diff -q  $file1 $file2
