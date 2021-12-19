@@ -1,33 +1,3 @@
-123 456 7
-8 9
-10
-f fi fin finn
-e ent enter entero enteroo
-entero
-cadena
-sino
-mientras
-fin
-imprimir
-1234
-"hola"
-=
-+
--
-*
-/
-==
-!=
-<
-<=
->
->=
-!
-||
-&&
-(
-)
-
 cadena caden
 cadena cadenaa
 
