@@ -34,6 +34,7 @@ private void declaracion()
     {
         case ENTERO:
             tokenRead(ENTERO);
+			codeVariableInteger();
             tokenRead(ID);
             declaracion();
             break;
