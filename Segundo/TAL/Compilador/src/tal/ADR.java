@@ -34,14 +34,16 @@ private void declaracion()
     {
         case ENTERO:
             tokenRead(ENTERO);
-			codeVariableInteger();
             tokenRead(ID);
+			codeVariableInteger();
             declaracion();
+			
             break;
 
         case CADENA:
             tokenRead(CADENA);
             tokenRead(ID);
+			codeVariableString();
             declaracion();
             break;
     }
@@ -72,8 +74,10 @@ private void bloque()
 private void asignacion()
 {
 	tokenRead(ID);
+	codeVariableAssignment();
 	tokenRead(ASIGN);
 	expresion();
+	codeAssignment();
 }
 private void impresion()
 {
@@ -81,6 +85,7 @@ private void impresion()
 	tokenRead(IPAR);
 	expresion();
 	tokenRead(DPAR);
+	codePrint();
 }
 private void condicion()
 {
@@ -88,6 +93,7 @@ private void condicion()
 	tokenRead(IPAR);
 	expresion();
 	tokenRead(DPAR);
+	codeIf();
 	bloque();
 	sino();
 	tokenRead(FIN);
@@ -98,6 +104,7 @@ private void sino()
 	if(tokenType() == SINO)
 	{
 		tokenRead(SINO);
+		codeElse();
 		bloque();
 	}
 }
