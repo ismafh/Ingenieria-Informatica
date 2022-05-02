@@ -1,7 +1,7 @@
-package p1;
+/*package p1;
 import java.util.Iterator;
 
-public class HashMap<K,V> implements Map<K,V> {
+
     public class HashMap<K,V> implements Map<K,V>{
     public HashMap(){
         this(16, 0.75f);
@@ -16,9 +16,9 @@ public class HashMap<K,V> implements Map<K,V> {
         K key;
 		V value;
 		
-		Node<Key, Value> next;
+		Node<K, V> next;
 		
-		public Node(Key key, Value value) {
+		public Node(K key, V value) {
 			
 			this.key = key;
 			this.value =value;
@@ -30,3 +30,4 @@ public class HashMap<K,V> implements Map<K,V> {
 }
 
 }
+*/
