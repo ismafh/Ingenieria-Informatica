@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=FiguresGroup
+comment0.text=\r\n\ class\ FiguresGroup.\r\n\ \r\n\ @author\ LTP\ \r\n\ @version\ 2020-21\r\n
+comment1.params=f
+comment1.target=void\ add(Figure)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=f
+comment3.target=boolean\ found(Figure)
+comment4.params=g
+comment4.target=boolean\ included(FiguresGroup)
+numComments=5
