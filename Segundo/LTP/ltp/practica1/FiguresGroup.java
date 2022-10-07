@@ -25,16 +25,16 @@ public class FiguresGroup {
 
     private boolean found(Figure f) {
         for (int i = 0; i < numF; i++) {
-        	if (figuresList[i].equals(f)) return true;
+            if (figuresList[i].equals(f)) return true;
         }
         return false;
     }
 
     private boolean included(FiguresGroup g) {
-		for (int i = 0; i < g.numF; i++) {
-        	if (!found(g.figuresList[i])) return false;
+        for (int i = 0; i < g.numF; i++) {
+            if (!found(g.figuresList[i])) return false;
         }
-		return true;
+        return true;
     }
     
     public boolean equals(Object o){
@@ -44,4 +44,32 @@ public class FiguresGroup {
         FiguresGroup f = (FiguresGroup) o;
         return this.included(f) && f.included(this);
     }
+    
+        public double area(){
+        double total = 0;
+        
+        for(int i = 0;i < numF;i++){
+            total += figuresList[i].area();
+        }
+        
+        return total;
+    }
+    
+    public Figure greatestFigure(){
+        Figure great = null;
+        
+        for(int i = 0;i < numF;i++){
+            if (i == 0){
+                great = figuresList[i];
+            }
+            else{
+                if (great.area() < figuresList[i].area()){
+                    great = figuresList[i];
+                }
+            }
+        }
+        
+        return great;
+    }
+
 }

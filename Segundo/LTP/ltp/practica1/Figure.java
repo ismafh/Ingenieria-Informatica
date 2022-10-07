@@ -27,5 +27,7 @@ public abstract class Figure {
         return "Position: (" + x + ", " + y + ")"; 
     }
     
-    abstract double area();    
+    abstract double area(); 
+    
+    abstract double perimeter();
 }

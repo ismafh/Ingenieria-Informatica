@@ -43,6 +43,5 @@ public class Rectangle extends Figure{
     
     public double perimeter(){
         return base * 2 + height * 2;
-    }
-    
+    }    
 }

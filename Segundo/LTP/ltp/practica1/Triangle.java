@@ -8,7 +8,7 @@ package practica1;
  * @version 2020-21
  */
 
-public class Triangle extends Figure {
+public abstract class Triangle extends Figure {
     private double base; 
     private double height;
 

@@ -32,4 +32,8 @@ public abstract class Circle extends Figure {
         double area = Math.PI*radius*radius;
         return area;
         }
+        
+     public double perimeter(){
+        return 2 * Math.PI * radius;
+    }
 }
