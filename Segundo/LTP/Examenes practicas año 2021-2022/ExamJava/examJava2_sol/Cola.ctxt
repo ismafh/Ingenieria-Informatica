@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Cola
+comment0.text=\n\ interface\ Cola\ \n\ \n\ @author\ LTP\ \n\ @version\ 2021-22\n
+comment1.params=
+comment1.target=java.lang.Object\ primero()
+comment2.params=
+comment2.target=java.lang.Object\ desencolar()
+numComments=3

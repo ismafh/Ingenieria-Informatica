@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Pila
+comment0.text=\r\n\ interface\ Pila\ \r\n\ \r\n\ @author\ LTP\ \r\n\ @version\ 2021-22\r\n
+comment1.params=
+comment1.target=java.lang.Object\ cima()
+comment2.params=
+comment2.target=java.lang.Object\ desapilar()
+numComments=3

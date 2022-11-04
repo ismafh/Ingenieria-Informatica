@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=VectorOrd
+comment0.text=\r\n\ interface\ VectorOrd\ \r\n\ \r\n\ @author\ LTP\ \r\n\ @version\ 2021-22\r\n
+comment1.params=
+comment1.target=java.lang.Object\ maximo()
+comment2.params=
+comment2.target=java.lang.Object\ minimo()
+numComments=3

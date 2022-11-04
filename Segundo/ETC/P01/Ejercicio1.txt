@@ -1,0 +1,5 @@
+ .globl __start
+ .text 0x00400000
+__start: li $a0,61
+	li $v0, 11
+	syscall

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Conjunto
+comment0.text=\r\n\ interface\ Conjunto\ \r\n\ \r\n\ @author\ LTP\ \r\n\ @version\ 2021-22\r\n
+comment1.params=e
+comment1.target=boolean\ pertenece(java.lang.Object)
+comment2.params=n
+comment2.target=Conjunto\ subconjunto(int)
+numComments=3
