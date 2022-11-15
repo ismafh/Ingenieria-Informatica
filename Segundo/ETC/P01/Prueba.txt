@@ -1,0 +1,10 @@
+.globl __start
+.data 0x10002000
+.text 0x00400000
+	A:    .space 4
+	B:    .space 4
+	C:    .word 0
+__start:lui $t0, 0x1000
+	ori $t0, $t0,  0x2000
+	lui  $t1, 0x0A00
+	sw $t1, 4 ($t0)

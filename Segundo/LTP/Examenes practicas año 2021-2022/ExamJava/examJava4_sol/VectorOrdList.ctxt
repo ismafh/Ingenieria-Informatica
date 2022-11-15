@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=VectorOrdList
+comment0.text=\r\n\ class\ VectorOrdList\r\n\ \r\n\ @author\ LTP\ \r\n\ @version\ 2021-22\r\n
+comment1.params=
+comment1.target=java.lang.Comparable\ maximo()
+comment2.params=
+comment2.target=java.lang.Comparable\ minimo()
+comment3.params=e
+comment3.target=void\ add(java.lang.Comparable)
+numComments=4
