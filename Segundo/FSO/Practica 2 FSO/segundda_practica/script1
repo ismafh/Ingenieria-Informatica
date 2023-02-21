@@ -1,7 +1,0 @@
-#!/bin/bash
-
-archivo="/home/Escritorio/segunda_practica/fichero1"
-
-f="${archivo##*/}"
-
-echo "${f%.*}"
