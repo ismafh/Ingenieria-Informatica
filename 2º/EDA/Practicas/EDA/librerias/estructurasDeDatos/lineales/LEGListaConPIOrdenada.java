@@ -1,21 +1,21 @@
 package librerias.estructurasDeDatos.lineales;
-import librerias.estructurasDeDatos.modelos.ListaConPI;
 
-public class LEGListaConPIOrdenada<E extends Comparable> 
-    extends LEGListaConPI<E>
-    implements ListaConPI<E> 
+
+/**
+ * Write a description of class LEGListaConPIOrdenaa here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class LEGListaConPIOrdenada<E extends Comparable<E>> extends LEGListaConPI<E>
 {
+    
     public void insertar(E e){
-        NodoLEG nuevo = new NodoLEG(e);
         inicio();
-        while( !esFin() && recuperar().compareTo(nuevo.dato) < 0 ){
+        while(!esFin() && e.compareTo(recuperar()) > 0){
             siguiente();
         }
-        nuevo.siguiente = ant.siguiente;    
-        ant.siguiente = nuevo;              
-        if (ant  ==  ult) {ult = nuevo; }
-        ant = nuevo;    
-        talla++;        
+        super.insertar(e);
     }
-
+    
 }
