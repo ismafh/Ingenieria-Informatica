@@ -36,17 +36,7 @@ public class BuscadorDeLaBibl {
     // cambiarse si procede 
     protected static String dirListaLibros =  "aplicaciones" + File.separator
                                              + "biblioteca" + File.separator;
-    public ListaConPI<Termino> enTitulo(){
-        ListaConPI<Termino> res = new LEGListaConPI();
-        ListaConPI<Termino> c = index.claves(); 
-        ListaConPI<BuscadorDeLaBibl.Posting> valor;
-        
-        for(c.inicio();!c.esFin();c.siguiente()){
-            Termino clave = c.recuperar();
-            valor=index.recuperar(clave);
-            System.out.println(valor.Posting.toString());
-        }
-    }
+    
     // UN String dirLibros, el directorio donde se ubican los (ficheros .txt
     // de los) libros de listaLibros. Su valor por defecto es el que figura a  
     // continuacion, por lo que debe cambiarse si procede 
@@ -210,7 +200,6 @@ public class BuscadorDeLaBibl {
      *  legomena" de la BD, o null si no existe ninguno.
      */
     public ListaConPI<Termino> hapax() {
-        /* COMPLETAR */
         ListaConPI<Termino> res = new LEGListaConPI();
         ListaConPI<Termino> c = index.claves(); 
         
@@ -226,4 +215,35 @@ public class BuscadorDeLaBibl {
         if (res.talla() == 0) return null;
         return res;
     }
+    
+    /* EXAMEN */
+    public ListaConPI<Termino> comienzanPor(String prefijo, String libro) {
+ 
+    if (!esTermino(prefijo)) {
+        return null;
+    }
+
+    ListaConPI<Termino> res = new LEGListaConPI<>();
+    ListaConPI<Termino> claves = index.claves();
+
+    for (claves.inicio(); !claves.esFin(); claves.siguiente()) {
+        Termino clave = claves.recuperar();
+        String termino = clave.toString(); 
+        if (termino.startsWith(prefijo)) {
+            ListaConPI<BuscadorDeLaBibl.Posting> valor = index.recuperar(clave);
+            boolean encontradoEnLibro = false;
+            for (valor.inicio(); !valor.esFin() && !encontradoEnLibro; valor.siguiente()) {
+                BuscadorDeLaBibl.Posting posting = valor.recuperar();
+                if (posting.tituloLibro.equals(libro)) {
+                    encontradoEnLibro = true;
+                }
+            }
+            if (encontradoEnLibro) {
+                res.insertar(clave);
+            }
+        }
+    }
+    return res;
+}
+
 }    

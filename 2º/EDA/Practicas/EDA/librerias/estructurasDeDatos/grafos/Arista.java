@@ -8,12 +8,9 @@ package librerias.estructurasDeDatos.grafos;
 public class Arista implements Comparable<Arista>{
     
     // UNA Arista TIENE UN vertice origen y UN vertice destino:
-    /*COMPLETAR*/
     protected int origen;
     protected int destino;
-
     // UNA Arista TIENE UN peso:
-    /*COMPLETAR*/
     protected double peso;
     
     /** Crea una arista (v, w) con peso p.
@@ -23,10 +20,10 @@ public class Arista implements Comparable<Arista>{
       * @param p  Peso
      */
     public Arista(int v, int w, double p) {
-        // COMPLETAR
-        origen = v;
-        destino = w;
-        peso = p;
+       origen = v;
+       destino = w;
+       peso = p;
+        
     }
 
     /** Devuelve el vertice origen de una arista.
@@ -34,7 +31,6 @@ public class Arista implements Comparable<Arista>{
       * @return int vertice origen
      */
     public int getOrigen() {    
-        // COMPLETAR 
         return origen;
     }
     
@@ -43,7 +39,6 @@ public class Arista implements Comparable<Arista>{
       * @return int vertice destino
      */
     public int getDestino() {  
-        // COMPLETAR
         return destino;
     }
     
@@ -52,8 +47,7 @@ public class Arista implements Comparable<Arista>{
       * @return double Peso de la arista
      */
     public double getPeso() {
-        // COMPLETAR 
-        return peso;
+        return peso; 
     }
     
     /** Devuelve un String que representa una arista
@@ -62,11 +56,12 @@ public class Arista implements Comparable<Arista>{
       * @return  String que representa la arista
      */
     public String toString() {
-        // COMPLETAR    
-        return "(" + origen + ", " + destino + ", " + peso + ")";
+        return "(" + origen + ", " + destino + ", " + peso + ")"; 
     }
-    
-    public int compareTo(Arista a){ 
-        return (int) Math.signum(this.peso - a.peso);
+    public int compareTo(Arista a){
+         double diferencia = this.peso - a.peso;
+         if (diferencia > 0) return 1;
+        else if (diferencia < 0) return -1;
+        else return 0;
     }
 }
