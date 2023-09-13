@@ -1,4 +1,4 @@
-public class Ejer2 extends Thread {
+/*public class Ejer2 extends Thread {
     private int label;
     private String name;
     public Ejer2(int n){
@@ -25,9 +25,9 @@ public class Ejer2 extends Thread {
     new Ejer2(2).start();
      } ,"SmallThread");
     }
-    }
+    }*/
 
-    /*Ejer 2 recortado
+    //Ejer 2 recortado
     public class Ejer2 extends Thread {
     private int label;
     public Ejer2(int n) {
@@ -49,4 +49,4 @@ public class Ejer2 extends Thread {
     public static void main(String[] args) {
         new Ejer2(4).start();
     }
-} */
+} 
