@@ -127,6 +127,30 @@ def getEuclideanDistance(state):
         tot += math.sqrt(pow((goalX - itemX), 2) + pow((goalY - itemY), 2))
     return tot
 
+def getDescolocadasDistance(state):
+ tot = 0.0
+ for i in range(0,9):
+        goal = end_state.index(str(i))
+        idx = state.index(str(i))
+        if idx != goal and i !=0:
+            tot +=1
+        return tot
+
+def getSecuenciasDistance(state):
+ index = [0,1,2,5,8,7,6,3,0]
+ res =0
+ for i in range(8):
+    nsiguiente = int(state[index[i]]) +1
+    estado = int(state[index[i]])
+    bloqueSiguiente = int(state[index[i +1]])
+    if estado ==0:
+        res +=3
+    elif(estado == 8 and bloqueSiguiente !=1):
+        res +=2
+    elif (nsiguiente != bloqueSiguiente) and nsiguiente !=9:
+        res +=2
+    return 3 * res
+ 
 
 
 
