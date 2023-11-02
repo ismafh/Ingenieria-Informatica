@@ -221,4 +221,22 @@ public abstract class Grafo {
         if(cardinal == numVertices() - 1) return aristas;
         return null;
     }
+    
+    public int verticeMayorGrado() {
+        Arista[] mstAristas = kruskal(); 
+        int[] grados = new int[numVertices()]; 
+        for (Arista arista : mstAristas) {
+        grados[arista.getOrigen()]++;
+        grados[arista.getDestino()]++;
+        }
+        int maxGrado = 0;
+        int verticeMaxGrado = 0;
+        for (int i = 0; i < numVertices(); i++) {
+            if (grados[i] > maxGrado) {
+            maxGrado = grados[i];
+            verticeMaxGrado = i;
+            }
+        }
+        return verticeMaxGrado;
+    }   
 }

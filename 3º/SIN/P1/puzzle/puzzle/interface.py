@@ -86,7 +86,7 @@ class InterfaceApp:
 
         self.algorithmbox = ttk.Combobox(self.appFrame)
         self.algorithmbox.configure(cursor="hand2", state="readonly",
-                                    values=('BFS', 'DFS (Graph Search)', 'DFS (Backtracking)', 'Voraz (Manhattan)', 'ID', 'A* Manhattan', 'A* Euclidean', 'IDA* Manhattan','Secuencias', 'Descolocada'))
+                                    values=('BFS', 'DFS (Graph Search)', 'DFS (Backtracking)', 'Voraz (Manhattan)', 'ID', 'A* Manhattan', 'A* Euclidean', 'IDA* Manhattan','Secuencias', 'Descolocada','Descolocadas+Euclidea'))
         self.algorithmbox.place(anchor="center", height=30, width=150, x=700, y=230)
         self.algorithmbox.bind("<<ComboboxSelected>>", self.selectAlgorithm)
 
@@ -424,6 +424,11 @@ class InterfaceApp:
             main.graphSearch(initialState, main.function_1,main.getSecuenciasDistance)
             path, cost, counter, depth, runtime, nodes, max_stored,memory_rep = \
             main.graphf_path, main.graphf_cost,main.graphf_counter, main.graphf_depth, main.time_graphf,main.node_counter, main.max_counter, main.max_rev_counter 
+        elif str(algorithm) == 'Descolocadas+Euclidea':
+            main.graphSearch(initialState, main.function_1,main.descoloeuclidea)
+            path, cost, counter, depth, runtime, nodes, max_stored,memory_rep = \
+            main.graphf_path, main.graphf_cost,main.graphf_counter, main.graphf_depth, main.time_graphf,main.node_counter, main.max_counter, main.max_rev_counter 
+            
     def resetGrid(self):
         """
         Resets the grid and step counter to the initial state

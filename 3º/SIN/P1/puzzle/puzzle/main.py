@@ -151,6 +151,8 @@ def getSecuenciasDistance(state):
         res +=2
     return 3 * res
  
+def descoloeuclidea(state):
+    return getDescolocadasDistance(state)+getEuclideanDistance(state)
 
 
 
