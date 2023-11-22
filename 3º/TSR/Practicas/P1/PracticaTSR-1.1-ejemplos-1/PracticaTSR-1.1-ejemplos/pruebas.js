@@ -1,3 +1,4 @@
+"use strict";
 const fs = require('node:fs/promises');
 /*function fibo(n) {
     return (n<2) ? 1 : fibo(n-2) + fibo(n-1)
@@ -61,7 +62,7 @@ const fs = require('node:fs/promises');
   console.log(f(10)(10))
 
 */
-const ev = require('events')
+/*const ev = require('events')
 const emitter = new ev.EventEmitter()
 const t = 1000, e1 = "uno"
 var handler = function () {
@@ -73,7 +74,7 @@ emitter.emit(e1)
 setInterval(etapa, t)
 }
 etapa()
-
+*/
 /*let MAX=1000
 console.log ("uno")
 setTimeout ( () => console.log ("dos"), 100)// Hacer trabajo
@@ -81,3 +82,8 @@ for (let i=0; i<MAX; i++) {}
 setTimeout ( () => console.log ("tres"), 100)
 setTimeout ( () => console.log ("cuatro"), 100)
 console.log ("cinco")*/
+
+for(i=0; i<3;i++){
+    console.log("prueba")
+}
+console.log(i)
