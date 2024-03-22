@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es-es">
+<head>
+ <meta charset="utf-8" />
+ <title>PobreCAPTCHA</title>
+ <script type="text/javascript">
+ function captcha(f) { // f es el formulario desde el que se invoca
+ if (f.s1.value == f.s2.value) {
+ if (confirm("Correcto. Desea enviar el texto '"+f.t.value+"'?")) return
+    true
+ } else alert("Incorrecto (los dígitos no coinciden). Se cancela")
+ return false
+ } // captcha
+ </script>
+</head>
+<body>
+<h1>PobreCAPTCHA</h1>
+<p>Para enviar el texto debes elegir un valor de la lista y escribirlo en la
+viñeta</p>
+<form action="http://a.b.c/hacer" method="post" onsubmit="return
+captcha(this);" >
+ <p>Selecciona un d&iacute;gito de la lista:
+ <select name="s1" required="required">
+ <option value="1">1</option>
+ <option value="2">2</option>
+ <option value="3">3</option>
+ <option value="4">4</option>
+ <option value="5">5</option>
+ </select><br />
+ Escribe ese mismo n&uacute;mero:
+ <input name="s2" required="required" /><br />
+ Texto que deseas enviar: <textarea name="t" required="required" cols="18"
+rows="3"></textarea><br />
+ <input type="submit" value="Enviar" />
+ </p>
+</form>
+
+</body>
+</html>
