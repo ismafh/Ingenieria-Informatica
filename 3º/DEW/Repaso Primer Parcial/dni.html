@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobar DNI</title>
+    <script>
+        function check(num){
+            var num = num.dni.value
+            if(num.length != 9){
+                alert("No tiene 9 dígitos")
+                
+            }
+
+            for(var i = 0; i<8;i++){
+                if(isNaN(parseInt(num[i]))){
+                    alert("El dígito " + i + " no es un número, introduce números en los 8 primeros dígitos")
+                    return false
+                }
+            }
+            var lastchar = num.charAt(8)
+            if(!isNaN(parseInt(lastchar))){
+                alert("El ultimo caracter tiene que ser una letra")
+                return false
+            }
+
+            alert(num + " es correcto")  
+        }
+    </script>
+</head>
+<body>
+    <h1>Comprobador de DNI</h1>
+    <form id="dnicheck" onsubmit="return check(this)">
+        <input type="text" id="dni" name="dni">
+        <input type="submit">
+    </form>
+</body>
+</html>

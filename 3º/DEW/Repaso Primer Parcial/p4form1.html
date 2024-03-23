@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Laboratorio 1 de DEW, curso 2022/23" />
+  <meta name="author" content="Ramon Garcia" />
+  <title>miniformulario</title>
+  <script>
+    function f(form) {
+      var dato = form.dato.value; // Obtiene el valor del campo "dato"
+      alert("En el formulario " + form.id + ", el valor de dato es: " + dato);
+      return false; // Impide que se invoque el CGI del campo action
+    }
+  </script>
+</head>
+<body>
+  <h1>dew1 - miniformulario</h1>
+  <p>Este ejemplo puede tomarse como base para trabajar con formularios.</p>
+  
+  <form id="mi_nombre" onsubmit="return f(this);">
+    <input type="text" id="dato" name="dato" />
+    <input type="submit" />
+  </form>
+</body>
+</html>
