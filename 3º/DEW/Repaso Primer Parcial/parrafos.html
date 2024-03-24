@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="parrafos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Adicional</title>
+    <style>
+        /* Aquí puedes agregar estilos CSS adicionales si es necesario */
+        .cambio-color {
+            color: black; /* Color de texto inicial */
+            background-color: white; /* Color de fondo inicial */
+        }
+    </style>
+</head>
+<body>
+    <h1>Ismael Fernandez DNI</h1>
+    <p class="primero">[1] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim
+        vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo
+        nec, commodo ultricies, turpis.
+    </p>
+    <p>[2] Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+        <span class="primero">Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.</span>        
+        Nullam sit amet nisl elementum elit convallis malesuada.
+    </p>
+    <p class="tercero cambio-color" onclick="cambiarColor()">[3] Phasellus magna sem, Semper quis, faucibus ut, rhoncus non, mi. Duis
+        pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at     
+        posuere ante quam non dolor.
+    </p>
+        
+    <script>
+        function cambiarColor() {
+            var parrafo = document.querySelector('.tercero');
+            // Obtenemos los estilos actuales del párrafo
+            var colorTexto = window.getComputedStyle(parrafo).color;
+            var colorFondo = window.getComputedStyle(parrafo).backgroundColor;
+
+            // Intercambiamos los colores
+            parrafo.style.color = colorFondo;
+            parrafo.style.backgroundColor = colorTexto;
+        }
+    </script>
+</body>
+</html>

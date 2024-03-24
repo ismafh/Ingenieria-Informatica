@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitiva</title>
+</head>
+<body onload="llenar()">
+    <h1>Loteria Primitiva</h1>
+    <div id="cuadros"></div>
+    <input type="submit" value="Comprobar" onclick="checkFields()">
+    
+    <script>
+        function llenar() {
+            var x = document.getElementById("cuadros");
+            
+            for (var i = 0; i < 50; i++) {
+                var y = document.createElement("input");
+                y.type = "checkbox";
+                y.value = i;
+                var z = document.createTextNode("" + i);
+                x.appendChild(y);
+                x.appendChild(z);
+            }
+        }
+
+        function checkFields() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            var numChecked = checkboxes.length;
+            var selectedValues = [];
+            
+            if (numChecked === 6) {
+                alert("Número de valores seleccionados: " + numChecked + ". Valores seleccionados: " + getSelectedValues(checkboxes) + ". Acción permitida.");
+                // Aquí puedes invocar la acción indicada en el formulario
+                // window.location.href = "http://a.b.c/hacer";
+            } else {
+                alert("Debe seleccionar exactamente 6 valores. Número actual de valores seleccionados: " + numChecked + ". Valores seleccionados: " + getSelectedValues(checkboxes));
+                // Si el número de valores no es 6, no se invocará la acción indicada en el formulario
+            }
+        }
+
+        function getSelectedValues(checkboxes) {
+            var values = [];
+            checkboxes.forEach(function(checkbox) {
+                values.push(checkbox.value);
+            });
+            return values.join(", ");
+        }
+    </script>
+</body>
+</html>
