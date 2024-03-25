@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+body{
+    font-family: 'Lato';
+}
+
+ol{
+    border-style: solid;
+}
+
+li{
+    background-color: lightblue;
+}
+
+div{
+    background-color: maroon;
+    color: white;
+}
+
+span{
+    background-color: white;
+    color: maroon;
+}
+

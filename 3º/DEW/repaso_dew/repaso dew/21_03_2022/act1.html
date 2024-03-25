@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-es">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8"/>
+        <title>HTML5</title>
+        <script>
+            function cambiar(f){
+                var texto = f.t.value
+                var y = document.getElementsByTagName("h1")[0]
+                y.innerHTML = texto
+            }
+            function intercambiar(d){
+                var ultima = document.getElementsByTagName("td")[document.getElementsByTagName("td").length - 1]
+                var t = ultima.innerHTML
+                var c = ultima.style.color
+                var b = ultima.style.backgroundColor
+
+                ultima.innerHTML = d.innerHTML
+                ultima.style.color = d.style.color
+                ultima.style.backgroundColor = d.style.backgroundColor
+
+                d.innerHTML = t
+                d.style.color = c
+                d.style.backgroundColor = b
+            }
+            function escribir(){
+                var x = document.getElementById("aqui")
+                var y = document.getElementsByTagName("td")
+                var text = 'Hay ' + y.length + ' celdas en esta tabla. ' + '<ol><li style= "background-color: ' + y[1].style.backgroundColor + '"" >El color de la segunda es ' + y[1].style.backgroundColor + '</li>'
+                x.innerHTML = text
+            }
+        </script>
+    </head>
+    <body onload="escribir()">
+        <h1>
+            HTML5
+        </h1>
+        <p>
+            El libro<cite> teoría de los colores, </cite>escrito por <code>Goethe</code> en 1810, influy&oacute;
+            en los colores seleccionados para crear armon&iacute;as. Los pares m&aacute;s
+            importantes (en ingl&eacute;s) son:
+        </p>
+        <p>
+            <table>
+                <tr>
+                    <td onclick="intercambiar(this)" style="background-color: yellow; color: violet;">yellow</td>
+                    <td onclick="intercambiar(this)" style="background-color: violet; color: yellow;">violet</td>
+                </tr>
+                <tr>
+                    <td onclick="intercambiar(this)" style="background-color: blue; color: orange;">blue</td>
+                    <td onclick="intercambiar(this)" style="background-color: orange; color: blue;">orange</td>
+                </tr>
+                <tr>
+                    <td onclick="intercambiar(this)" style="background-color: red; color: green;">red</td>
+                    <td onclick="intercambiar(this)" style="background-color: green; color: red;">green</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+            Un formulario para cambiar el contenido del <code>h1</code>
+        </p>
+        <form onsubmit="cambiar(this)">
+            Nuevo texto:
+            <input type="text" name="t" required="required">
+            </br>
+            <input type="submit" value="Cambiar">
+        </form>
+        <div id="aqui"></div>
+    </body>
+</html>

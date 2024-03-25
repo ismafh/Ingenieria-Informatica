@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-es">
+    <head>
+        <meta charset="utf-8">
+        <title>apellido1</title>
+        <link rel="stylesheet" href="act1.css" type="text/css">
+        <script>
+            function print(){
+                var x = document.getElementsByTagName("p")[1]
+                x.innerHTML="Hoy es "+ new Date();
+                x.id = "p"
+            }
+            function hazMagia(f){
+                event.preventDefault();
+                if(1 > parseInt(f.n1.value) || parseInt(f.n1.value) > 4)
+                    alert("El valor " + f.n1.value + " no está entre 1 y 4")
+                else{
+                    x = document.getElementsByTagName("li")
+                    x[parseInt(f.n1.value) - 1].innerHTML = f.n2.value
+                    if(toString(f.n2.value) == toString(document.getElementsByTagName("h1")[0].innerHTML)){
+                        document.getElementsById("p").style.backgroundColor="maroon"
+                    }
+                }                   
+                return false
+            }
+        </script>
+    </head>
+    <body onload="print()">
+        <h1>
+            apellido1
+        </h1>
+        <p>
+            Normalmente aquí va...
+        </p>
+        <p>
+
+        </p>
+        <ol>
+            <li>Primero</li>
+            <li>Segundo</li>
+            <li>tercero</li>
+            <li>Cuarto</li>
+        </ol>
+        <form onsubmit="hazMagia(this);">
+            <p>
+                N
+                <input type="number" required="required" name="n1">
+                Texto
+                <input type="text" required="required" placeholder="apellido1" name="n2">
+            </p>
+            <input type="submit" value="Hacer" />
+        </form>
+    </body>
+</html>

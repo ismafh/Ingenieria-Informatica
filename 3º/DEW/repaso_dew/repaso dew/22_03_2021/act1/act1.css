@@ -1,0 +1,16 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+li{
+    background-color: lime;
+}
+
+ol{
+    font-family: "Dancing Script", sans-serif;
+}
+
+#p{
+    color: white;
+    font-family: "Dancing Script", sans-serif;
+    background-color: #5555a3;
+}

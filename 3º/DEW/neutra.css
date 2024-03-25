@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body{
+   background-color: lightblue;
+
+}
+
+p{
+    font-family: 'Ubuntu';
+}
+
+ol{
+    background-color: black;
+    color: white;
+}
+ul{
+    background-color: white;
+    color: black;
+}
+li{
+    border-style: solid;
+}
+
+td{
+    background-color: orange;
+}
+
+span{
+    background-color: black;
+    color: lightblue;
+    font-size: 2em;
+}
+
+
+

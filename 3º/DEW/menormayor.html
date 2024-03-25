@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-es">
+    <head>
+        <meta charset="utf-8">
+        <title>Menor y mayor</title>
+        <script>
+            function menor(){
+                document.getElementsByTagName("h1")[0].innerHTML = "Seleccionado menor"
+                document.getElementsByTagName("p")[3].style.fontSize = "2em"
+                document.getElementsByTagName("p")[2].style.fontSize = "1em"
+            }
+            function mayor(){
+                document.getElementsByTagName("h1")[0].innerHTML = "Seleccionado mayor"
+                document.getElementsByTagName("p")[2].style.fontSize = "2em"
+                document.getElementsByTagName("p")[3].style.fontSize = "1em"
+            }
+            function reiniciar(){
+                document.getElementsByTagName("h1")[0].innerHTML = "Menor y mayor"
+                document.getElementsByTagName("p")[2].style.fontSize = "1em"
+                document.getElementsByTagName("p")[3].style.fontSize = "1em"
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Menor y mayor</h1>
+        <p>
+            Este p&aacute;rrafo cuenta con unas 40 letras.
+        </p>
+        <p>
+            Este segundo p&aacute;rrafo es m&aacute;s largo y alcanza las 59 letras.
+        </p>
+        <p>
+            Cuando escribo un p&aacute;rrafo as&iacute; de largo, con cerca de 160 letras, estoy convencido de que ser&aacute; el m&aacute;s grande de todos los que aparecen en este texto de muestra.
+        </p>
+        <p>
+            P&aacute;rrafo de 22 letras.
+        </p>
+        <input type="submit" name="menor" id="menor" value="Menor" onclick="menor()">
+        <input type="submit" name="mayor" id="mayor" value="Mayor" onclick="mayor()">
+        <input type="submit" name="reiniciar" id="reiniciar" value="Reiniciar" onclick="reiniciar()">
+    </body>
+
+</html>

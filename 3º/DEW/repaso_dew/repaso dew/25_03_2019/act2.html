@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es-es">
+    <head>
+        <meta charset="utf-8">
+        <title>Variadito</title>
+        <link rel="stylesheet" href="act2.css" type="text/css"/>
+        <script type="text/javascript">
+            var intentos = 0;
+            function resultado(f){
+                event.preventDefault();
+                ++ intentos
+                var num = parseInt(f.elements[0].value)
+                var r1 = num % 2
+                var r2 = num % 3
+                if(r1==0 && r2==0){
+                    alert("El número de intentos es " + intentos)
+                    intentos=0
+                }
+                else{
+                    f.var2.value = r1
+                    document.getElementById("id3").value = r2
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Variadito</h1>
+        <form onsubmit="resultado(this)">
+            <p>
+                Dame un n&uacute;mero:
+                <input type="number" required="required"/>
+                <br>
+                <input type="submit" value="Enviar"/>
+            </p>  
+            <p>
+                Resto por 2
+                <input  name="var2"/>
+            </p>
+            <p>
+                Resto por 3
+                <input  id="id3"/>
+            </p>
+    </form>
+    </body>
+</html>

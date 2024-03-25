@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function captcha(f){
+            if(f.n.value != f.num.value){
+                alert("No hay el mismo numero")
+                return false
+            }else{
+                confirm("Desea enviar el texto?")
+                return true
+            }
+        }
+    </script>
+</head>
+<body>
+   <h1>PobreCAPTCHA</h1>
+    <form action="http://a.b.c/hacer" method="post" onsubmit="return captcha(this)">
+        Para enviar el texto debes elegir un valor de la lista y escribirlo en la viñeta
+         <br>
+        Seleccíona un número de la lista:
+        <select name="numero" id="n">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+        Escribe ese mismo número:
+        <input type="text" required="required" name="num">
+        <br>
+        Texto que deseas enviar:
+        <input type="text">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
