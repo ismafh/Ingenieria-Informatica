@@ -8,3 +8,9 @@
 -> Porque en la cuestión 4 guarda en $t y no en $a
 
 -> Como funciona el bit R
+
+
+----Dudas P13----
+
+->Porque usa 0x2 en la cuestión 1
+
