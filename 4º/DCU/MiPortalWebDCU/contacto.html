@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact conmigo</title>
+    <link rel="stylesheet" href="css/estilosDCU.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Portal Web</h1>
+        <hr>
+    </header>
+    <main>
+        <section id="mensaje">
+            <h3 class="tituloSeccion">Contacta conmigo</h3>
+            <img src="imgs/mail.png" height="200">
+            <p class="texto">Si quieres enviarme algún mensaje, rellena el siguiente formulario.</p>
+            <form action="servidor.php">
+                <p>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="userName" value="Pedro" disabled>
+                </p>
+                <p>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="userSurname" placeHolder="Escribe una apellido" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="micorreo@gmail.com">
+                </p>
+                <p>
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8}">
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" minlength="5" maxlength="10" required>
+                </p>
+                <p>
+                    <label for="nac">Fecha Nacimiento:</label>
+                    <input type="date" id="nac" name="nac">
+                </p>
+                <p>
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="0" max="150">
+                </p>
+                <p>
+                    <label>Sexo:</label><br>
+                    <input type="radio" id="sexo1" name="sexo">
+                    <label for="sexo1">Hombre</label><br>
+                    <input type="radio" id="sexo2" name="sexo">
+                    <label for="sexo2">Mujer</label>
+                </p>
+                <p>
+                    <label id="motivo">Motivo:</label><br>
+                    <select id="motivo">
+                        <option value="pregunta">Quiero hacer una pregunta</option>
+                        <option value="sugerencia">Quiero hacer una sugerencia</option>
+                        <option value="critica">Quiero hacer una crítica</option>
+                    </select>
+                </p>
+                <p>
+                    <label id="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje">Valor por defecto</textarea>
+                </p>
+                <button type="submit"><i>Enviar</i></button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        Sígueme en mis redes sociales: facebook instagram twitter
+    </footer>
+</body>
+</html>
