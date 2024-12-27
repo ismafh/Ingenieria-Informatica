@@ -49,7 +49,7 @@ fin:
 getchar:			# $v0 = getchar()
 ### A COMPLETAR: código de la función
 
-
+	
 
 
 ###
