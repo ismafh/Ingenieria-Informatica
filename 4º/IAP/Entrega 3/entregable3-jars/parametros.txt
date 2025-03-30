@@ -1,0 +1,17 @@
+En este documento se establece el orden y los parametros con los que ejecutar los .jar.
+
+
+1º-mostrarNotas: localhost notas.alumno.anyo
+
+2º-notamedia: localhost p3
+
+3º-consumidorJSON: localhost c1 hola
+
+4º-consumidorCSV: localhost p2 hola
+
+5º-generadorCSV: localhost p2 hola
+
+6º-generadorJSON: localhost c1 hola
+
+
+
